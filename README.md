@@ -1,6 +1,6 @@
 # Starlet Serializer
 
-![Tests](https://github.com/starlet-engine/serializer/actions/workflows/test.yml/badge.svg)
+![Tests](https://github.com/starlet-libs/serializer/actions/workflows/test.yml/badge.svg)
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/std/the-standard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
@@ -26,8 +26,8 @@ A lightweight serialization library for **Starlet** projects to handle both data
   - Error-safe macros: `STARLET_PARSE_OR`, `STARLET_PARSE_STRING_OR`
 
 ## Dependencies
-  - [starlet-math](https://github.com/starlet-engine/math) (auto-fetched)
-  - [starlet-logger](https://github.com/starlet-engine/logger) (auto-fetched)
+  - [starlet-math](https://github.com/starlet-libs/math) (auto-fetched)
+  - [starlet-logger](https://github.com/starlet-libs/logger) (auto-fetched)
 
 ## Installation
 
@@ -44,7 +44,7 @@ A lightweight serialization library for **Starlet** projects to handle both data
 include(FetchContent)
 
 FetchContent_Declare(starlet_serializer
-  GIT_REPOSITORY https://github.com/starlet-engine/serializer.git 
+  GIT_REPOSITORY https://github.com/starlet-libs/serializer.git
   GIT_TAG main
 )
 FetchContent_MakeAvailable(starlet_serializer)
@@ -65,7 +65,7 @@ executable('app_name', 'main.cpp', dependencies: starlet_serializer_dep)
 
 ### Building and Testing
 ```bash
-git clone https://github.com/starlet-engine/serializer.git
+git clone https://github.com/starlet-libs/serializer.git
 cd serializer
 ```
 
