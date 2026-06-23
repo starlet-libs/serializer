@@ -27,11 +27,15 @@ sources = files(
   'src/writer/scene_writer.cpp',
 )
 
-starlet_math = subproject('starlet_math')
-starlet_math_dep = starlet_math.get_variable('starlet_math_dep')
-
-starlet_logger = subproject('starlet_logger')
-starlet_logger_dep = starlet_logger.get_variable('starlet_logger_dep')
+if not get_option('build_local')
+  starlet_math = subproject('starlet_math')
+  starlet_math_dep = starlet_math.get_variable('starlet_math_dep')
+  starlet_logger = subproject('starlet_logger')
+  starlet_logger_dep = starlet_logger.get_variable('starlet_logger_dep')
+else
+  starlet_math_dep = dependency('starlet_math')
+  starlet_logger_dep = dependency('starlet_logger')
+endif
 
 starlet_serializer_lib = static_library('starlet_serializer', sources,
   include_directories : inc,
