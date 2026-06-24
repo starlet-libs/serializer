@@ -2,7 +2,3 @@ option(
   'build_tests', description : 'Build unit tests',
   type : 'boolean', value : false
 )
-option(
-  'build_local', description : 'Link against local dependencies instead of fetching',
-  type : 'boolean', value : false
-)
